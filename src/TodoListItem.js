@@ -1,14 +1,11 @@
 import React from 'react';
 
-const TodoListItem = (props) =>{
-    console.log(props);
+const TodoListItem = ({ todo }) => {
     return (
-        <div>
-            {/*<li>{props.todoAttribute.title}</li>*/}
-          <li>{props.title}</li>          
-        </div>
-    )
-
-}
+        <li>
+            {todo.title}
+        </li>
+    );
+};
 
 export default TodoListItem;
