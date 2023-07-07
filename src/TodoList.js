@@ -1,7 +1,6 @@
 import React from 'react';
 import TodoListItem from './TodoListItem';
 
-const TodoList = () =>{
 
 const todoList = [
     {
@@ -18,19 +17,14 @@ const todoList = [
     },
   ];
 
-  todoList.map((todo)=>console.log(todo));
-  // todoList.map((todo)=>console.log(todo.id));
-  // todoList.map((todo)=>console.log(todo.id));
-
-  return(
-    <div>
-      <ul>
-        {todoList.map((item)=>(<TodoListItem key={item.id}
-        title={item.title} />)
-        )}
-      </ul>
-    </div>
-  )
-}
+  const TodoList = ({ todoList }) => {
+    return (
+        <ul>
+            {todoList.map((todo) => (
+                <TodoListItem key={todo.id} todo={todo} />
+            ))}
+        </ul>
+    );
+};
 
 export default TodoList;
